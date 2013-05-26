@@ -1,0 +1,75 @@
+Cloud Computing :
+1) Provides elasticity of using resources as per the requirements
+2) User need to pay only for the amount of resources and time
+3) Provides shared rather than dedicated resources
+
+Three components:
+1) SaaS: Software-as-a-Service, provides a way to run applications on browser rather than installing on PCs.
+2) PaaS: Platform-as-a-Service, allows developers to develop apps using online tools and platform.
+3) IaaS: Infrastructure-as-a-Service, provides storage,servers,computing resources etc. 
+
+Virtualization:
+Provides flexibility and scalebility to cloud computing by making it possible to run various OS on same machine using hypervisor. 
+
+General points :
+The important difference between SaaS(software-as-a-service) providers and ASPs(Applicatin service provider) is that SaaS providers offer access to applications on a shared, not dedicated,infrastructure.
+
+Security Issues :
+1) Infrastructure security:
+Network level:
+Ensuring Data Confidentiality and Integrity-Some resources and data previously confined to a private network are now exposed to the
+Internet, and to a shared public network belonging to a third-party cloud provider
+
+Ensuring Proper Access Control-You will have decreased access to relevant network-level logs and data, and a limited ability
+to thoroughly conduct investigations and gather forensic data. eg non-aged IP
+
+Ensuring the Availability of Internet-Facing Resources- prefix hijacking(due to attack or misconfiguration), DNS attacks, DOS, DDOS
+
+You can reduce your confidentiality risks by using encryption; specifically by using validated implementations of cryptography for data-in-transit. Secure digital signatures make it much more difficult, if not impossible, for someone to tamper with your data, and this ensures data
+integrity
+
+Host level:
+VM escape-Virtual machine escape is an exploit in which the attacker runs code on a VM that allows an operating system running within it to break out and interact directly with the hypervisor. Such an exploit could give the attacker access to the host operating system and all other virtual machines (VMs) running on that host.
+insider threats by way of weak access control to the hypervisor.
+Public cloud is most vulnerable to these attacks.
+
+securing host pg 48
+
+Application level:
+DoS attacks on pay-as-you-go cloud applications will result in a dramatic increase in your cloud utility bill:you’ll see increased use of network bandwidth, CPU, and storage consumption. This type of attack is also being characterized as economic denial of sustainability (EDoS)
+
+Extra attention needs to be paid to the authentication and access control features offered by SaaS CSPs. Usually that is the only security control available to manage risk to information
+
+Cloud customers should try to understand cloud-specific access control mechanisms—including support for strong authentication and privilege management based on user roles and functions—and take the steps necessary to protect information hosted in the cloud.In that multitenant data store model, where encryption may not be feasible due to key management and other design barriers, data is tagged and stored with a unique
+customer identifier
+
+Paas - The lack of an API standard has ramifications for both security management and portability of applications across the cloud.Developers should expect CSPs to offer a set of security features, including user authentication,single sign-on (SSO) using federation, authorization (privilege management), and SSL or TLS support, made available via the API
+
+Iaas - customers have full responsibility for securing their applications deployed in the IaaS cloud.customers should not expect any application security assistance from CSPs other than basic guidance and features related to firewall policy that may affect the application’s
+communications with other applications, users, or services within or outside the cloud
+
+
+
+Data Security:
+
+1)Merely encrypting data and using a non-secured protocol (e.g., “vanilla” or “straight” FTP or HTTP) can provide confidentiality, but does not ensure the integrity of the data.
+
+2)data-at-rest need to stored in unencrypted form(with tagging) in order to be processed for applications. This pose unauthorised access issues. If data-at-rest is required just for storage, then it can be stored in encrypted form. Data processing in encrypted form is required.
+
+3)data remanence - even after deleting data, it can be accessed fro database through some recovery and therefore, sensitive information can be compromised.Any sensitive data should not be put on public cloud(only for storage in encrypted form)
+
+Storage:
+
+1) confidentiality : Since, it is difficult for a CSP to manage different keys for all its user to encrypt their data, and using single key for all users is not safe, users themselves need to encrypt data before uploading to cloud. Proper encryption algorithm and key management should be chosen.
+
+2) integrity : integrity also requires the use of message authentication codes (MACs). The simplest way to use MACs on encrypted data is to use a
+block symmetric algorithm (as opposed to a streaming symmetric algorithm) in cipher block chaining (CBC) mode, and to include a one-way hash function. Customers need to check integrity of their data without downloading and reuploading of huge data.But, this is difficult as physical address of data changes dynamically in cloud.A mathematical way to verify the integrity of the data as it is dynamically stored in the cloud us required.
+
+3)Availability: Data stored in the cloud may be lost or may become unavailable for some time.
+
+
+Other issues:
+1) Cloud service providers have their own specific APIs which make it difficult to move accross clouds.
+
+
+
