@@ -15,6 +15,7 @@ General points :
 The important difference between SaaS(software-as-a-service) providers and ASPs(Applicatin service provider) is that SaaS providers offer access to applications on a shared, not dedicated,infrastructure.
 
 Security Issues :
+
 1) Infrastructure security:
 Network level:
 Ensuring Data Confidentiality and Integrity-Some resources and data previously confined to a private network are now exposed to the
@@ -60,12 +61,34 @@ Data Security:
 
 Storage:
 
-1) confidentiality : Since, it is difficult for a CSP to manage different keys for all its user to encrypt their data, and using single key for all users is not safe, users themselves need to encrypt data before uploading to cloud. Proper encryption algorithm and key management should be chosen.
+1)confidentiality : Since, it is difficult for a CSP to manage different keys for all its user to encrypt their data, and using single key for all users is not safe, users themselves need to encrypt data before uploading to cloud. Proper encryption algorithm and key management should be chosen.
 
-2) integrity : integrity also requires the use of message authentication codes (MACs). The simplest way to use MACs on encrypted data is to use a
-block symmetric algorithm (as opposed to a streaming symmetric algorithm) in cipher block chaining (CBC) mode, and to include a one-way hash function. Customers need to check integrity of their data without downloading and reuploading of huge data.But, this is difficult as physical address of data changes dynamically in cloud.A mathematical way to verify the integrity of the data as it is dynamically stored in the cloud us required.
+2)integrity : integrity also requires the use of message authentication codes (MACs). The simplest way to use MACs on encrypted data is to use a block symmetric algorithm (as opposed to a streaming symmetric algorithm) in cipher block chaining (CBC) mode, and to include a one-way hash function. Customers need to check integrity of their data without downloading and reuploading of huge data.But, this is difficult as physical address of data changes dynamically in cloud.A mathematical way to verify the integrity of the data as it is dynamically stored in the cloud is required.
 
 3)Availability: Data stored in the cloud may be lost or may become unavailable for some time.
+
+
+IAM(Identity and Access Management): Three basic concepts of IAM:
+
+1) Authentication: proving your identity before using any service
+2) Authorization: After authentication, determing privileges to user
+3) Auditing: Regular review and examination of authentication, authorization records, and activities to determine the adequacy of IAM system controls
+
+IAM processes support the following operational activities:
+1)Provisioning - onboarding of users, these processes provide users with necessary access to data and technology resources
+2)Credential and attribute management-handling password expiration, encryption management of credentials during transit and at rest, and access policies of user attributes
+3)Entitlement management-The processes in this domain address the provisioning and deprovisioning of privileges needed for the user to access
+resources including systems, applications, and databases
+4)Compliance management-This process implies that access rights and privileges are monitored and tracked to ensure the security of an enterprise’s resources
+
+IAM Standards:
+SAML(Security assertion markup language) : supports SSO(single sign on), user needs to login once and can access all authorized applications without providing any specific authentication. SAML produces trusted certificates for IdP(Identity provider) and SP(Service provider)
+
+SPML(Service Provisioning Markup Language) : SPML is an emerging standard that can help organizations automate provisioning of user identities 
+for cloud services
+
+
+As a first step, organizations planning for cloud services must plan for basic user management functions such as user account provisioning and ongoing user account management, including timely deprovisioning of users when they no longer need access to the cloud service
 
 
 Other issues:

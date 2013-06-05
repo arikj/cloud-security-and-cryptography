@@ -1,0 +1,21 @@
+While reading about cloud security, we found following two interesting problems :
+
+
+a) Data Security in cloud:
+
+1)Data transition takes place in encrypted form and data remains in encrypted form if required for simple storage.
+
+2)But, since cloud service provides applications to allow users to process their data online, data need to be unencrypted.
+
+Therefore, unless the data is in the cloud for only simple storage, the data will be unencrypted during at least part of its life cycle in the cloud—processing at a minimum. This leads to confidentiality and integrity issues on private data.
+
+Therefore, a secure and fully homomorphic encryption scheme is required to process data without decrypting it.
+ 
+b) Data Integrity:
+
+Integrity requires the use of message authentication codes (MACs).Customers need to check integrity of their data on cloud without downloading and reuploading of huge data, as it will be slow. 
+A mathematical way to verify the integrity of the data as it is dynamically stored in the cloud is required.
+
+We, need to learn about homomorphic encryption and data integrity in detail. Please tell us some reference for the same.
+
+
