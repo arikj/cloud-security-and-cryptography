@@ -16,6 +16,5 @@ b) Data Integrity:
 Integrity requires the use of message authentication codes (MACs).Customers need to check integrity of their data on cloud without downloading and reuploading of huge data, as it will be slow. 
 A mathematical way to verify the integrity of the data as it is dynamically stored in the cloud is required.
 
-We, need to learn about homomorphic encryption and data integrity in detail. Please tell us some reference for the same.
 
 
